@@ -1,0 +1,926 @@
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıradan Tilki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        sky: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+        style="background: transparent;">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div
+                        class="w-11 h-11 rounded-2xl bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center shadow-lg shadow-sky-200 group-hover:shadow-sky-300 transition-shadow duration-300">
+                        <img src="https://yt3.googleusercontent.com/1unWdQfEfcWfKQ7-La29GqH8sZK0aYqaLi_5LDsQ06V8iQE-tdGWiPq1r1qNjlYZKnZrrqYwAA=s160-c-k-c0x00ffffff-no-rj" alt=""> <i class="fa-solid fa-fox text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-display font-bold text-xl text-slate-800 tracking-tight">Sıradan Tilki</span>
+                        <span
+                            class="block text-[10px] text-sky-500 font-semibold tracking-widest uppercase -mt-0.5">YouTube
+                            Kanalı</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="#anasayfa"
+                        class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-300">Ana
+                        Sayfa</a>
+                    <a href="#hakkimda"
+                        class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-300">Hakkımda</a>
+                    <a href="#icerikler"
+                        class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-300">İçerikler</a>
+                    <a href="#iletisim"
+                        class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-300">İletişim</a>
+                </div>
+
+                <!-- CTA + Mobile Toggle -->
+                <div class="flex items-center gap-3">
+                    <button id="mobileMenuBtn"
+                        class="md:hidden w-10 h-10 rounded-xl bg-white/80 backdrop-blur flex items-center justify-center text-slate-700 hover:bg-sky-50 transition-colors">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="mobile-menu hidden md:hidden absolute top-full left-4 right-4 mt-2 glass-strong rounded-2xl shadow-2xl shadow-sky-100/50 p-2 overflow-hidden">
+            <div class="flex flex-col gap-1">
+                <a href="#anasayfa"
+                    class="px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all">Ana
+                    Sayfa</a>
+                <a href="#hakkimda"
+                    class="px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all">Hakkımda</a>
+                <a href="#icerikler"
+                    class="px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all">İçerikler</a>
+                <a href="#iletisim"
+                    class="px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all">İletişim</a>
+                <div class="border-t border-slate-100 mt-1 pt-2">
+                    <a href="https://youtube.com" target="_blank"
+                        class="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white text-sm font-semibold rounded-xl">
+                        <i class="fa-brands fa-youtube"></i>
+                        Kanala Abone Ol
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero-bg relative min-h-screen flex items-center overflow-hidden">
+        <!-- Floating Orbs -->
+        <div class="orb w-96 h-96 bg-sky-300 top-20 -left-20" style="animation-delay: 0s;"></div>
+        <div class="orb w-80 h-80 bg-blue-200 bottom-20 right-10" style="animation-delay: 2s;"></div>
+        <div class="orb w-64 h-64 bg-cyan-200 top-1/2 left-1/3" style="animation-delay: 4s;"></div>
+        <div class="orb w-48 h-48 bg-sky-200 top-10 right-1/4" style="animation-delay: 1s;"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 pt-24 pb-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div class="text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur rounded-full text-sky-700 text-xs font-semibold tracking-wider uppercase mb-8 reveal">
+                        <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+                        YouTube İçerik Üreticisi
+                    </div>
+
+                    <h1
+                        class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-[1.1] mb-6 reveal reveal-delay-1">
+                        Sıradan<br>
+                        <span
+                            class="bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 bg-clip-text text-transparent">Tilki</span>
+                    </h1>
+
+                    <p
+                        class="text-lg sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 reveal reveal-delay-2">
+                        Sıradan bir tilki olarak sıradan olmayan içerikler üretiyorum.
+                        Teknoloji, oyun, günlük hayat ve daha fazlası burada!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start reveal reveal-delay-3">
+                        <a href="#icerikler"
+                            class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold rounded-2xl shadow-xl shadow-sky-200 hover:shadow-sky-300 hover:-translate-y-1 transition-all duration-500 btn-shine">
+                            <i class="fa-solid fa-play text-sm group-hover:scale-110 transition-transform"></i>
+                            İçerikleri Keşfet
+                        </a>
+                        <a href="https://www.youtube.com/@S%C4%B1radanTilki" target="_blank"
+                            class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/70 backdrop-blur text-slate-700 font-semibold rounded-2xl border border-white/60 hover:bg-white hover:-translate-y-1 transition-all duration-500 shadow-lg shadow-sky-100/50">
+                            <i class="fa-brands fa-youtube text-red-500"></i>
+                            Kanala Git
+                        </a>
+                    </div>
+
+                    <!-- Social Proof -->
+                    <div class="mt-12 flex items-center gap-6 justify-center lg:justify-start reveal reveal-delay-4">
+                        <div class="flex -space-x-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-300 to-sky-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                                A</div>
+                            <div
+                            
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-300 to-blue-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                                B</div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                                C</div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-slate-300 to-slate-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                                +</div>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-2xl font-bold text-slate-800 counter-value" data-target="500">0</div>
+                            <div class="text-sm text-slate-500">Mutlu Abone</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="relative hidden lg:flex items-center justify-center reveal reveal-delay-2">
+                    <div class="relative w-[480px] h-[480px]">
+                        <!-- Decorative rings -->
+                        <div class="absolute inset-0 rounded-full border border-sky-200/50 animate-spin"
+                            style="animation-duration: 30s;"></div>
+                        <div class="absolute inset-8 rounded-full border border-sky-300/30 animate-spin"
+                            style="animation-duration: 20s; animation-direction: reverse;"></div>
+                        <div class="absolute inset-16 rounded-full border border-sky-400/20 animate-spin"
+                            style="animation-duration: 15s;"></div>
+
+                        <!-- Center card -->
+                        <div
+                            class="absolute inset-24 rounded-3xl bg-white/70 backdrop-blur-xl shadow-2xl shadow-sky-200/50 flex items-center justify-center overflow-hidden">
+                            <div class="text-center p-8">
+                                <div
+                                    class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center shadow-xl shadow-sky-200">
+                                    <i class="fa-solid fa-fox text-white text-4xl"></i>
+                                    <a href="https://www.youtube.com/@S%C4%B1radanTilki"> <img class="rounded-2xl"
+                                            src="https://yt3.googleusercontent.com/1unWdQfEfcWfKQ7-La29GqH8sZK0aYqaLi_5LDsQ06V8iQE-tdGWiPq1r1qNjlYZKnZrrqYwAA=s160-c-k-c0x00ffffff-no-rj"
+                                            alt="">
+                                    </a>
+                                </div>
+                                <div class="font-display font-bold text-2xl text-slate-800">Sıradan Tilki</div>
+                                <div class="text-sky-500 text-sm font-medium mt-1">YouTube Kanalı</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating badges -->
+                        <div class="absolute top-8 right-8 px-4 py-2 bg-white/80 backdrop-blur rounded-xl shadow-lg shadow-sky-100 flex items-center gap-2 animate-bounce"
+                            style="animation-duration: 3s;">
+                            <i class="fa-solid fa-video text-sky-500"></i>
+                            <span class="text-xs font-semibold text-slate-700  counter-value" data-target="50 ">0</span><span class="text-xs font-semibold text-slate-700">Video</span>
+                        </div>
+                        <div class="absolute bottom-16 left-0 px-4 py-2 bg-white/80 backdrop-blur rounded-xl shadow-lg shadow-sky-100 flex items-center gap-2 animate-bounce"
+                            style="animation-duration: 4s; animation-delay: 1s;">
+                            <i class="fa-solid fa-heart text-red-400"></i>
+                            <span class="text-xs font-semibold text-slate-700  counter-value" data-target="2000 ">0</span><span class="text-xs font-semibold text-slate-700">Beğeni</span>
+                        </div>
+                        <div class="absolute top-1/3 -left-4 px-4 py-2 bg-white/80 backdrop-blur rounded-xl shadow-lg shadow-sky-100 flex items-center gap-2 animate-bounce"
+                            style="animation-duration: 3.5s; animation-delay: 0.5s;">
+                            <i class="fa-brands fa-youtube text-red-400"></i>
+                            <span class="text-xs font-semibold text-slate-700  counter-value" data-target="400 ">0</span><span class="text-xs font-semibold text-slate-700">Abone</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
+            <span class="text-xs text-slate-500 font-medium tracking-wider uppercase">Aşağı Kaydır</span>
+            <div class="w-6 h-10 rounded-full border-2 border-slate-300 flex items-start justify-center p-1.5">
+                <div class="w-1.5 h-3 bg-sky-400 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="hakkimda" class="py-24 lg:py-32 relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-sky-50/50 to-transparent pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <!-- Image Side -->
+                <div class="relative reveal">
+                    <div class="relative rounded-3xl overflow-hidden img-zoom-container shadow-2xl shadow-sky-100">
+                        <img src="https://yt3.googleusercontent.com/1unWdQfEfcWfKQ7-La29GqH8sZK0aYqaLi_5LDsQ06V8iQE-tdGWiPq1r1qNjlYZKnZrrqYwAA=s160-c-k-c0x00ffffff-no-rj"
+                            alt="Tilki" class="w-full h-[450px] object-cover img-zoom">
+                        <div class="absolute inset-0 bg-gradient-to-t from-sky-900/40 via-transparent to-transparent">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="glass-strong rounded-2xl p-5">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center">
+                                        <i class="fa-solid fa-award text-white"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-display font-bold text-slate-800">5+ Yıllık Deneyim</div>
+                                        <div class="text-sm text-slate-500">İçerik Üretimi</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-sky-100 rounded-3xl -z-10 rotate-12"></div>
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-blue-50 rounded-2xl -z-10 -rotate-6"></div>
+                </div>
+
+                <!-- Content Side -->
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 rounded-full text-sky-600 text-xs font-semibold tracking-wider uppercase mb-6 reveal">
+                        <i class="fa-solid fa-user"></i>
+                        Hakkımda
+                    </div>
+
+                    <h2 class="font-display font-bold text-4xl lg:text-5xl text-slate-900 mb-6 reveal reveal-delay-1">
+                        Kim Bu<br><span class="text-sky-500">Sıradan Tilki?</span>
+                    </h2>
+
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6 reveal reveal-delay-1">
+                        Merhaba! Ben Sıradan Tilki. YouTube'da teknoloji, oyun ve günlük hayat üzerine içerikler
+                        üretiyorum.
+                        Amacım, karmaşık konuları en sade ve eğlenceli şekilde anlatmak.
+                    </p>
+
+                    <p class="text-slate-500 leading-relaxed mb-10 reveal reveal-delay-2">
+                        Her gün yeni bir şey öğrenmeye ve bu öğrendiklerimi sizinle paylaşmaya bayılıyorum.
+                        Kanalımda hem eğleneceğiniz hem de bir şeyler öğreneceğiniz içerikler bulacaksınız.
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-3 gap-4 reveal reveal-delay-3">
+                        <div
+                            class="text-center p-5 rounded-2xl bg-white shadow-lg shadow-slate-100 border border-slate-50 hover:shadow-xl hover:shadow-sky-100 transition-all duration-300 hover:-translate-y-1">
+                            <div class="text-3xl font-display font-bold text-sky-500 counter-value" data-target="150">0
+                            </div>
+                            <div class="text-xs text-slate-500 mt-1 font-medium">Video</div>
+                        </div>
+                        <div
+                            class="text-center p-5 rounded-2xl bg-white shadow-lg shadow-slate-100 border border-slate-50 hover:shadow-xl hover:shadow-sky-100 transition-all duration-300 hover:-translate-y-1">
+                            <div class="text-3xl font-display font-bold text-sky-500 counter-value" data-target="12500">
+                                0</div>
+                            <div class="text-xs text-slate-500 mt-1 font-medium">Abone</div>
+                        </div>
+                        <div
+                            class="text-center p-5 rounded-2xl bg-white shadow-lg shadow-slate-100 border border-slate-50 hover:shadow-xl hover:shadow-sky-100 transition-all duration-300 hover:-translate-y-1">
+                            <div class="text-3xl font-display font-bold text-sky-500 counter-value" data-target="3">0
+                            </div>
+                            <div class="text-xs text-slate-500 mt-1 font-medium">Yıl</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Categories -->
+    <section id="icerikler" class="py-24 lg:py-32 bg-gradient-to-b from-white via-sky-50/30 to-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 rounded-full text-sky-600 text-xs font-semibold tracking-wider uppercase mb-6 reveal">
+                    <i class="fa-solid fa-layer-group"></i>
+                    İçeriklerim
+                </div>
+                <h2 class="font-display font-bold text-4xl lg:text-5xl text-slate-900 mb-5 reveal reveal-delay-1">
+                    Neler <span class="text-sky-500">Üretiyorum?</span>
+                </h2>
+                <p class="text-slate-500 text-lg reveal reveal-delay-2">
+                    Kanalımda çeşitli konularda içerikler bulabilirsiniz. İşte en sevilen kategorilerim!
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+
+                    <!-- Card 1 -->
+                    <div
+                        class="group bg-white rounded-3xl p-8 shadow-lg shadow-slate-100/50 border border-slate-100 card-hover reveal">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center mb-6 shadow-lg shadow-sky-200 group-hover:shadow-sky-300 group-hover:scale-110 transition-all duration-500">
+                            <i class="fa-solid fa-laptop-code text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-slate-800 mb-3">Tilki Askerde</h3>
+                        <p class="text-slate-500 leading-relaxed mb-6 text-sm">
+                            Bir Tilki nin askerlik macerası.
+                        </p>
+                        <div class="flex items-center gap-2 text-sky-500 font-semibold text-sm group/link cursor-pointer">
+                            <button type="button"
+                                class="video-open-btn inline-flex items-center gap-2 bg-transparent border-0 p-0 text-sky-500 font-semibold cursor-pointer"
+                                data-video-id="lHcWpFzT1P4"
+                                data-video-title="Tilki Askerde! Askerlik Maceram">
+                                <span class="link-underline">Videoyu Gör</span>
+                                <i class="fa-solid fa-arrow-right text-xs group-hover/link:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group bg-white rounded-3xl p-8 shadow-lg shadow-slate-100/50 border border-slate-100 card-hover reveal reveal-delay-1">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-200 group-hover:shadow-blue-300 group-hover:scale-110 transition-all duration-500">
+                        <i class="fa-solid fa-gamepad text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-slate-800 mb-3">Oyun</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6 text-sm">
+                        Oyun incelemeleri, oynanış videoları ve oyun dünyasından en güncel içerikler.
+                    </p>
+                    <div class="flex items-center gap-2 text-blue-500 font-semibold text-sm group/link cursor-pointer">
+                        <a target="_blank" href="https://www.youtube.com/@S%C4%B1radanTilki"><span
+                                class="link-underline">Videoları Gör</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right text-xs group-hover/link:translate-x-1 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group bg-white rounded-3xl p-8 shadow-lg shadow-slate-100/50 border border-slate-100 card-hover reveal reveal-delay-2">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mb-6 shadow-lg shadow-cyan-200 group-hover:shadow-cyan-300 group-hover:scale-110 transition-all duration-500">
+                        <i class="fa-solid fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-slate-800 mb-3">Bilgi</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6 text-sm">
+                        İlginç bilgiler, hayat hileleri ve öğrenmeye değer konular hakkında videolar.
+                    </p>
+                    <div class="flex items-center gap-2 text-cyan-500 font-semibold text-sm group/link cursor-pointer">
+                        <span class="link-underline">Videoları Gör</span>
+                        <i
+                            class="fa-solid fa-arrow-right text-xs group-hover/link:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Videos -->
+    <section class="py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-sky-50/50 via-white to-blue-50/30 pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 rounded-full text-sky-600 text-xs font-semibold tracking-wider uppercase mb-4 reveal">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Son Yüklenenler
+                    </div>
+                    <h2 class="font-display font-bold text-4xl text-slate-900 reveal reveal-delay-1">
+                        Son <span class="text-sky-500">Videolar</span>
+                    </h2>
+                </div>
+                <a href="https://youtube.com" target="_blank"
+                    class="group inline-flex items-center gap-2 text-sky-600 font-semibold hover:text-sky-700 transition-colors reveal reveal-delay-2">
+                    <span class="link-underline">Tüm Videolar</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Video 1 -->
+                <div
+                    class="group bg-white rounded-3xl overflow-hidden shadow-lg shadow-slate-100/50 border border-slate-100 card-hover reveal">
+                    <div class="relative img-zoom-container overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=340&fit=crop"
+                            alt="Video" class="w-full h-52 object-cover img-zoom">
+                        <div
+                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play text-sky-500 text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/70 backdrop-blur rounded-lg text-white text-xs font-medium">
+                            12:34
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-2.5 py-1 bg-sky-50 text-sky-600 text-[10px] font-bold tracking-wider uppercase rounded-md">Teknoloji</span>
+                            <span class="text-xs text-slate-400">2 gün önce</span>
+                        </div>
+                        <h3
+                            class="font-display font-bold text-lg text-slate-800 mb-2 group-hover:text-sky-600 transition-colors line-clamp-2">
+                            2024'ün En İyi 10 Teknolojik Ürünü
+                        </h3>
+                        <p class="text-slate-500 text-sm line-clamp-2">
+                            Bu yıl piyasaya çıkan en iyi teknolojik ürünleri sizin için inceledim!
+                        </p>
+                        <div class="flex items-center gap-4 mt-4 pt-4 border-t border-slate-100">
+                            <span class="flex items-center gap-1.5 text-xs text-slate-400">
+                                <i class="fa-solid fa-eye"></i> 15.2K
+                            </span>
+                            <span class="flex items-center gap-1.5 text-xs text-slate-400">
+                                <i class="fa-solid fa-thumbs-up"></i> 1.8K
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div
+                    class="group bg-white rounded-3xl overflow-hidden shadow-lg shadow-slate-100/50 border border-slate-100 card-hover reveal reveal-delay-1">
+                    <div class="relative img-zoom-container overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=340&fit=crop"
+                            alt="Video" class="w-full h-52 object-cover img-zoom">
+                        <div
+                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play text-sky-500 text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/70 backdrop-blur rounded-lg text-white text-xs font-medium">
+                            18:45
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold tracking-wider uppercase rounded-md">Oyun</span>
+                            <span class="text-xs text-slate-400">5 gün önce</span>
+                        </div>
+                        <h3
+                            class="font-display font-bold text-lg text-slate-800 mb-2 group-hover:text-sky-600 transition-colors line-clamp-2">
+                            Yeni Çıkan Oyunları Test Ettim!
+                        </h3>
+                        <p class="text-slate-500 text-sm line-clamp-2">
+                            Bu ay çıkan yeni oyunları oynadım ve düşüncelerimi paylaşıyorum.
+                        </p>
+                        <div class="flex items-center gap-4 mt-4 pt-4 border-t border-slate-100">
+                            <span class="flex items-center gap-1.5 text-xs text-slate-400">
+                                <i class="fa-solid fa-eye"></i> 22.1K
+                            </span>
+                            <span class="flex items-center gap-1.5 text-xs text-slate-400">
+                                <i class="fa-solid fa-thumbs-up"></i> 3.2K
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div
+                    class="group bg-white rounded-3xl overflow-hidden shadow-lg shadow-slate-100/50 border border-slate-100 card-hover reveal reveal-delay-2">
+                    <div class="relative img-zoom-container overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=340&fit=crop"
+                            alt="Video" class="w-full h-52 object-cover img-zoom">
+                        <div
+                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                <i class="fa-solid fa-play text-sky-500 text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/70 backdrop-blur rounded-lg text-white text-xs font-medium">
+                            8:20
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-2.5 py-1 bg-cyan-50 text-cyan-600 text-[10px] font-bold tracking-wider uppercase rounded-md">Bilgi</span>
+                            <span class="text-xs text-slate-400">1 hafta önce</span>
+                        </div>
+                        <h3
+                            class="font-display font-bold text-lg text-slate-800 mb-2 group-hover:text-sky-600 transition-colors line-clamp-2">
+                            Hayatınızı Kolaylaştıracak 15 İpucu
+                        </h3>
+                        <p class="text-slate-500 text-sm line-clamp-2">
+                            Günlük hayatınızı daha kolay hale getirecek pratik ipuçları!
+                        </p>
+                        <div class="flex items-center gap-4 mt-4 pt-4 border-t border-slate-100">
+                            <span class="flex items-center gap-1.5 text-xs text-slate-400">
+                                <i class="fa-solid fa-eye"></i> 31.5K
+                            </span>
+                            <span class="flex items-center gap-1.5 text-xs text-slate-400">
+                                <i class="fa-solid fa-thumbs-up"></i> 4.7K
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="iletisim" class="py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-sky-50/40 to-sky-100/20 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 rounded-full text-sky-600 text-xs font-semibold tracking-wider uppercase mb-6 reveal">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    İletişim
+                </div>
+                <h2 class="font-display font-bold text-4xl lg:text-5xl text-slate-900 mb-5 reveal reveal-delay-1">
+                    Bana <span class="text-sky-500">Yazın</span>
+                </h2>
+                <p class="text-slate-500 text-lg reveal reveal-delay-2">
+                    Bir fikriniz mi var? Sorunuz mu var? Aşağıdaki formdan bana ulaşabilirsiniz!
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8 lg:gap-12">
+                <!-- Contact Info -->
+                <div class="lg:col-span-2 space-y-6 reveal">
+                    <div class="bg-white rounded-3xl p-8 shadow-lg shadow-slate-100/50 border border-slate-100">
+                        <h3 class="font-display font-bold text-xl text-slate-800 mb-6">İletişim Bilgileri</h3>
+
+                        <div class="space-y-5">
+                            <div class="flex items-start gap-4 group">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center flex-shrink-0 group-hover:bg-sky-100 transition-colors">
+                                    <i class="fa-solid fa-envelope text-sky-500"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-700">E-posta</div>
+                                    <div class="text-sm text-slate-500 mt-0.5"> <a href="mailto:iletisim@siradantilki.com">iletisim@siradantilki.com</a></div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 group">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center flex-shrink-0 group-hover:bg-red-100 transition-colors">
+                                    <i class="fa-brands fa-youtube text-red-500"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-700" >YouTube</div>
+                                    <div class="text-sm text-slate-500 mt-0.5"> <a href="https://www.youtube.com/@S%C4%B1radanTilki" target="_blank">@SıradanTilki</a></div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 group">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center flex-shrink-0 group-hover:bg-sky-100 transition-colors">
+                                    <i class="fa-brands fa-twitter text-sky-500"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-700">Twitter / X</div>
+                                    <div class="text-sm text-slate-500 mt-0.5"> <a href="https://www.x.com/@siradantilki" target="_blank">@siradantilki</a></div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 group">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-pink-50 flex items-center justify-center flex-shrink-0 group-hover:bg-pink-100 transition-colors">
+                                    <i class="fa-brands fa-instagram text-pink-500"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-700">Instagram</div>
+                                    <div class="text-sm text-slate-500 mt-0.5"> <a href="https://www.instagram.com/siradantilki" target="_blank">@siradantilki</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg shadow-slate-100/50 border border-slate-100">
+                        <h3 class="font-display font-bold text-lg text-slate-800 mb-5">Sosyal Medya</h3>
+                        <div class="flex gap-3">
+                            <a href="#"
+                                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-white shadow-lg shadow-red-200 hover:shadow-red-300 hover:-translate-y-1 transition-all duration-300">
+                                <i class="fa-brands fa-youtube text-lg"></i>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center text-white shadow-lg shadow-sky-200 hover:shadow-sky-300 hover:-translate-y-1 transition-all duration-300">
+                                <i class="fa-brands fa-twitter text-lg"></i>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-white shadow-lg shadow-pink-200 hover:shadow-pink-300 hover:-translate-y-1 transition-all duration-300">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white shadow-lg shadow-indigo-200 hover:shadow-indigo-300 hover:-translate-y-1 transition-all duration-300">
+                                <i class="fa-brands fa-discord text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-3 reveal reveal-delay-1">
+                    <form id="contactForm"
+                        class="bg-white rounded-3xl p-8 lg:p-10 shadow-lg shadow-slate-100/50 border border-slate-100">
+                        <div class="grid sm:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2.5">Adınız</label>
+                                <input type="text" placeholder="Adınızı girin"
+                                    class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-sky-400 input-glow transition-all duration-300">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2.5">E-posta</label>
+                                <input type="email" placeholder="ornek@email.com"
+                                    class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-sky-400 input-glow transition-all duration-300">
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold text-slate-700 mb-2.5">Konu</label>
+                            <select
+                                class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm text-slate-800 focus:outline-none focus:border-sky-400 input-glow transition-all duration-300 appearance-none cursor-pointer">
+                                <option>Bir konu seçin</option>
+                                <option>İş Birliği</option>
+                                <option>Video Önerisi</option>
+                                <option>Soru</option>
+                                <option>Diğer</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-8">
+                            <label class="block text-sm font-semibold text-slate-700 mb-2.5">Mesajınız</label>
+                            <textarea rows="5" placeholder="Mesajınızı buraya yazın..."
+                                class="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-sky-400 input-glow transition-all duration-300 resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold rounded-2xl shadow-xl shadow-sky-200 hover:shadow-sky-300 hover:-translate-y-0.5 transition-all duration-500 btn-shine flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Mesaj Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white relative overflow-hidden">
+        <!-- Top decorative line -->
+        <div class="h-1 bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-400"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div
+                            class="w-11 h-11 rounded-2xl bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center shadow-lg shadow-sky-500/20">
+                            <i class="fa-solid fa-fox text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="font-display font-bold text-xl tracking-tight">Sıradan Tilki</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Sıradan bir tilki olarak sıradan olmayan içerikler üretiyorum. Bana katılın!
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-sky-500 hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-sky-500 hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-sky-500 hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-sky-500 hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-display font-bold text-sm tracking-wider uppercase text-slate-300 mb-5">Hızlı
+                        Bağlantılar</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#anasayfa" class="text-slate-400 hover:text-sky-400 transition-colors text-sm">Ana
+                                Sayfa</a></li>
+                        <li><a href="#hakkimda"
+                                class="text-slate-400 hover:text-sky-400 transition-colors text-sm">Hakkımda</a></li>
+                        <li><a href="#icerikler"
+                                class="text-slate-400 hover:text-sky-400 transition-colors text-sm">İçerikler</a></li>
+                        <li><a href="#iletisim"
+                                class="text-slate-400 hover:text-sky-400 transition-colors text-sm">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div>
+                    <h4 class="font-display font-bold text-sm tracking-wider uppercase text-slate-300 mb-5">Kategoriler
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-slate-400 hover:text-sky-400 transition-colors text-sm">Teknoloji</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-sky-400 transition-colors text-sm">Oyun</a>
+                        </li>
+                        <li><a href="#" class="text-slate-400 hover:text-sky-400 transition-colors text-sm">Bilgi</a>
+                        </li>
+                        <li><a href="#" class="text-slate-400 hover:text-sky-400 transition-colors text-sm">Eğlence</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-display font-bold text-sm tracking-wider uppercase text-slate-300 mb-5">Bülten</h4>
+                    <p class="text-slate-400 text-sm mb-4">Yeni videolardan haberdar olmak için abone olun!</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="E-posta adresiniz"
+                            class="flex-1 px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors">
+                        <button
+                            class="px-5 py-3 bg-gradient-to-r from-sky-500 to-sky-600 rounded-xl text-white hover:from-sky-400 hover:to-sky-500 transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-slate-500 text-sm"> Sıradan Tilki. Tüm hakları saklıdır.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-slate-500 hover:text-sky-400 transition-colors text-sm">Gizlilik
+                        Politikası</a>
+                    <a href="#" class="text-slate-500 hover:text-sky-400 transition-colors text-sm">Kullanım
+                        Koşulları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Window -->
+        <div id="chatWindow"
+            class="chat-widget closed absolute bottom-16 right-0 w-80 sm:w-96 bg-white rounded-3xl shadow-2xl shadow-sky-200/50 border border-slate-100 overflow-hidden">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-sky-500 to-sky-600 px-5 py-4 flex items-center gap-3">
+                <div class="relative">
+                    <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+                        <i class="fa-solid fa-fox text-white"></i>
+                    </div>
+                    <div
+                        class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-sky-500">
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="font-semibold text-white text-sm">Sıradan Tilki Bot</div>
+                    <div class="text-sky-100 text-xs">Çevrimiçi</div>
+                </div>
+                <button id="closeChat"
+                    class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Messages -->
+            <div id="chatMessages" class="h-80 overflow-y-auto p-4 space-y-3 bg-slate-50/50">
+                <div class="flex gap-2.5 message-in">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-fox text-white text-xs"></i>
+                    </div>
+                    <div
+                        class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm border border-slate-100 max-w-[80%]">
+                        <p class="text-sm text-slate-700 leading-relaxed">Merhaba! Ben Sıradan Tilki'nin yardımcı
+                            botuyum. Size nasıl yardımcı olabilirim?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Replies -->
+            <div id="quickReplies" class="px-4 pb-2 flex flex-wrap gap-2">
+                <button onclick="sendQuickReply('Videolar nerede?')"
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 text-xs font-medium rounded-full hover:bg-sky-100 transition-colors">Videolar
+                    nerede?</button>
+                <button onclick="sendQuickReply('İş birliği yapmak istiyorum')"
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 text-xs font-medium rounded-full hover:bg-sky-100 transition-colors">İş
+                    birliği</button>
+                <button onclick="sendQuickReply('Sosyal medya hesapları')"
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 text-xs font-medium rounded-full hover:bg-sky-100 transition-colors">Sosyal
+                    medya</button>
+                <button onclick="sendQuickReply('Merhaba!')"
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 text-xs font-medium rounded-full hover:bg-sky-100 transition-colors">Merhaba!</button>
+            </div>
+
+            <!-- Input -->
+            <div class="p-3 border-t border-slate-100 bg-white">
+                <div class="flex gap-2">
+                    <input id="chatInput" type="text" placeholder="Bir mesaj yazın..."
+                        class="flex-1 px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-sky-400 transition-colors">
+                    <button id="sendMessage"
+                        class="w-10 h-10 bg-gradient-to-r from-sky-500 to-sky-600 rounded-xl flex items-center justify-center text-white hover:from-sky-400 hover:to-sky-500 transition-all shadow-lg shadow-sky-200">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <button id="chatToggle"
+            class="relative w-14 h-14 bg-gradient-to-r from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-sky-300/50 hover:shadow-sky-400/50 hover:-translate-y-1 transition-all duration-300 pulse-ring">
+            <i class="fa-solid fa-comments text-xl"></i>
+        </button>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal" aria-hidden="true">
+        <div class="video-modal-overlay" data-video-close></div>
+        <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+            <div class="video-modal-header">
+                <div>
+                    <p class="video-modal-kicker">Video Önizleme</p>
+                    <h3 id="videoModalTitle" class="video-modal-title">Tilki Askerde! Askerlik Maceram</h3>
+                </div>
+                <button type="button" id="videoModalClose" class="video-modal-close" aria-label="Videoyu kapat">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="video-modal-content">
+                <div class="video-frame-wrap">
+                    <iframe
+                        id="videoModalFrame"
+                        src=""
+                        title="Tilki Askerde! Askerlik Maceram"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast"
+        class="toast fixed top-24 right-6 z-50 bg-white rounded-2xl shadow-2xl shadow-sky-200/50 border border-slate-100 p-5 max-w-sm">
+        <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-check text-emerald-500"></i>
+            </div>
+            <div>
+                <div class="font-semibold text-slate-800 text-sm">Mesajınız Gönderildi!</div>
+                <div class="text-slate-500 text-xs mt-1">En kısa sürede size dönüş yapacağım.</div>
+            </div>
+            <button onclick="hideToast()" class="text-slate-400 hover:text-slate-600 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+    <script src="js/uygulama.js" defer></script>
+</body>
+
+</html>
