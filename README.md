@@ -1,11 +1,26 @@
-# Sıradan Tilki Web Sitesi
+# Sıradan Tilki Sitesi
 
-Bu sürüm, tek HTML dosyasındaki yapının daha düzenli bir proje yapısına ayrılmış halidir.
+## Dosya yapısı
+- `index.html`: Sayfanın HTML yapısı
+- `css/stil.css`: Özel CSS stilleri
+- `js/uygulama.js`: Site etkileşimleri, sayaçlar, video penceresi ve iletişim formu
+- `js/bot.js`: Ayrı yardımcı bot ve bilgi bankası
 
-## Klasör yapısı
-- `index.html` → Sayfa yapısı ve içerikler
-- `css/stil.css` → Özel CSS ve animasyonlar
-- `js/uygulama.js` → Menü, sayaç, sohbet kutusu, form ve diğer etkileşimler
+## Yardımcı botu düzenleme
+Botun temel bilgileri `js/bot.js` içindeki `SITE_BILGILERI` bölümündedir.
 
-## Kullanım
-`index.html` dosyasını tarayıcıda açmanız yeterlidir. Tailwind CSS ve Font Awesome dış kaynak olarak CDN üzerinden yüklenir.
+Yeni soru-cevap eklemek için `BOT_KURALLARI` dizisine yeni bir nesne ekleyebilirsin:
+
+```js
+{
+  id: 'yeni-konu',
+  keywords: ['örnek soru', 'başka ifade'],
+  answers: [
+    'Bu konu için verilecek cevap.'
+  ]
+}
+```
+
+`keywords` alanına ziyaretçinin kullanabileceği farklı ifadeleri eklemek eşleşmeyi güçlendirir. `answers` içine birden fazla cevap koyarsan bot bunlardan rastgele birini seçer.
+
+Bot tarayıcı içinde çalışır ve bir yapay zekâ API'sine bağlı değildir. Gerçek bir yapay zekâ sohbeti için ayrıca bir sunucu/API bağlantısı gerekir.
